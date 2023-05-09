@@ -100,7 +100,11 @@ while True:
                 if button.checkClick(x,y):
                     myValue = buttonListValues[int(i % 4)][int(i / 4)]  # get correct number
                     if myValue == '=':
-                        myEquation = str(eval(myEquation))
+                        try:
+                            myEquation = str(eval(myEquation))
+                        except (SyntaxError, NameError,ZeroDivisionError):
+                            myEquation = "Invalid equation"
+
                     else:
                         myEquation += myValue
                         delayCounter = 1
