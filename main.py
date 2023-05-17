@@ -115,7 +115,7 @@ while True:
                                 myEquation = "Invalid equation"
                         else:
                             pass
-
+# extra function
                     elif myValue == 'C':
                         myEquation = ''
                         delayCounter = 1
